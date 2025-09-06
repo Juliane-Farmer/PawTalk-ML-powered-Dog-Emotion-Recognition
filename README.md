@@ -1,6 +1,7 @@
 # PawTalk
 
 **ML-powered Dog Emotion Recognition** 
+
 Dogs have a lot to say, but their emotions often remain a mystery. This project implements an emotion-classification system for dogs. It uses a trained machine-learning model running on a Raspberry Pi to analyze camera input, then shows detected emotions and confidence scores on a LCD display and signals them via an RGB LED. The model recognizes four primary emotional states.
 
 ---
@@ -48,8 +49,10 @@ Dogs have a lot to say, but their emotions often remain a mystery. This project 
 Clone the repository and install dependencies for both the AI client and the Raspberry Pi server.
 
 # Clone the repo
+```
 git clone https://github.com/Juliane-Farmer/PawTalk-ML-powered-Dog-Emotion-Recognition.git
 cd PawTalk-ML-powered-Dog-Emotion-Recognition
+```
 
 # AI client setup
 cd ai_client
@@ -63,12 +66,13 @@ pip install -r requirements.txt
 
 Project-level configuration lives in `config.yaml` at the repository root:
 
-
+```
 model_path: ./models/best_colab.pt
 server:
   host: 0.0.0.0
   port: 8500
 confidence_threshold: 0.6
+```
 
 
 * **model\_path:** Path to your trained `.pt` model file.
@@ -77,10 +81,10 @@ confidence_threshold: 0.6
 
 Emotion labels are defined in `classes.txt` (one label per line, in the order of model output indices):
 
-happy
-sad
-angry
-relaxed
+* happy
+* sad
+* angry
+* relaxed
 
 ## Project Structure
 
